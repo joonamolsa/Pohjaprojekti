@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("#nav a");
+
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Karelia ammattikorkeakoulu - Joona Mölsä</h1>
+      </div>
+      <div id="nav">
+        <ul>
+          <li><a href="index.html">Alku</a></li>
+          <li><a href="about.html">Tietoa</a></li>
+          <li><a href="opintojaksot.html">Opintojaksot</a></li>
+          <li><a href="hobbys.html">Harrastukset</a></li>
+          <li><a href="contact.html">Viesti</a></li>
+        </ul>
+      </div>
+      <div id="main">
+        <h1>Harrastukset</h1>
+        <p>
+          Harrastuksiini kuuluu pelaaminen tietokoneella (tottakai).
+          Tasapainottamassa istumista käyn myös kuntosalilla. Kesäisin tulee
+          ajeltua moottoripyörällä, jos säät sallivat. Korjaan myös
+          autoni/moottoripyöräni, jos tulee jotakin vikaa. Käyttöautonani toimii
+          vuoden 1999 Audi S4 ja kesäautoni on e39 korimallin BMW M5.
+        </p>
+      </div>
+      <div id="sidebar">
+        <h3>Ajankohtaista</h3>
+        Web-ohjelmointi opintojakso on alkanut.
+      </div>
+      <div class="clr"></div>
+      <div id="footer"></div>
+      <p>Copyright &copy; 2025</p>
+    </div>
+  </body>
+</html>
